@@ -1,0 +1,83 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="14.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{47FA2972-AE90-42D4-98D1-BB5A868C9B8A}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>ModalHandler</RootNamespace>
+    <AssemblyName>ModalHandler</AssemblyName>
+    <TargetFrameworkVersion>v4.5.1</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <TargetFrameworkProfile />
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <LangVersion>6</LangVersion>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <LangVersion>6</LangVersion>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="UIAutomationClient" />
+    <Reference Include="UIAutomationTypes" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Dialogs\Uia\ModalDialog.cs" />
+    <Compile Include="Dialogs\WinApi\FileUploadDialog.cs" />
+    <Compile Include="Dialogs\BaseSecurityDialog.cs" />
+    <Compile Include="Dialogs\WinApi\TopLevelModalDialog.cs" />
+    <Compile Include="Dialogs\WinApi\SecurityDialog.cs" />
+    <Compile Include="Interfaces\Dialogs\IDialog.cs" />
+    <Compile Include="Dialogs\WinApi\ModalDialog.cs" />
+    <Compile Include="Dialogs\Uia\SecurityDialog.cs" />
+    <Compile Include="Interfaces\Dialogs\ISecurityDialog.cs" />
+    <Compile Include="Interfaces\Elements\IButton.cs" />
+    <Compile Include="Interfaces\Elements\IElement.cs" />
+    <Compile Include="Interfaces\Dialogs\IFileUploadDialog.cs" />
+    <Compile Include="Interfaces\IHandler.cs" />
+    <Compile Include="Interfaces\Elements\ITextBox.cs" />
+    <Compile Include="Elements\WinApi\WinApiButton.cs" />
+    <Compile Include="Elements\WinApi\WinApiElement.cs" />
+    <Compile Include="Elements\WinApi\WinApiTextBox.cs" />
+    <Compile Include="Handlers\CleanUpHandler.cs" />
+    <Compile Include="Handlers\FileUploadHandler.cs" />
+    <Compile Include="Handlers\BaseHandler.cs" />
+    <Compile Include="Handlers\WindowsSecurityHandler.cs" />
+    <Compile Include="Interfaces\Dialogs\ITopLevelDialog.cs" />
+    <Compile Include="Tools\WinApi.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Elements\Uia\UiaButton.cs" />
+    <Compile Include="Elements\Uia\UiaTextBox.cs" />
+    <Compile Include="Elements\Uia\UiaElement.cs" />
+    <Compile Include="Interfaces\ILogger.cs" />
+    <Compile Include="Tools\Util.cs" />
+    <Compile Include="Tools\Logger.cs" />
+    <Compile Include="Tools\UiAutomation.cs" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

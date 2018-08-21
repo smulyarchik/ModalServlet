@@ -1,0 +1,18 @@
+﻿<Window x:Class="ModalHandler.Test.App.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        mc:Ignorable="d"
+        Title="Main Window" Height="350" Width="525">
+    <Grid>
+        <Button Height="23" Margin="270,63,100,0"
+                VerticalAlignment="Top" Click="WindowsSecurity_Click" Content="Windows Security(Win32)" />
+        <Button Height="23" Margin="106,63,270,0"
+                VerticalAlignment="Top" Click="WindowsSecurity_Click" Content="Windows Security(Xaml)" />
+        <Button Height="23" Margin="100,218,100,0"
+                VerticalAlignment="Top" Click="FileUpload_Click" Content="File Upload" />
+        <TextBox x:Name="StatusBox" HorizontalAlignment="Left" Height="29" Margin="100,144,0,0" TextWrapping="Wrap"
+                 VerticalAlignment="Top" Width="317" IsReadOnly="true" AutomationProperties.Name="Status Box" />
+    </Grid>
+</Window>
